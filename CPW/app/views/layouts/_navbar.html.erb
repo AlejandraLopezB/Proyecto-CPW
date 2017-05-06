@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-inverse">
+  <ul class="no-list row center-xs">
+    <li  class="col-md">
+      <%= link_to "CPW", root_path, class: "navbar-brand col-xs" %>
+    </li>
+
+
+    <%if user_signed_in? %>
+		<li  class="col-md">
+	     	<%= link_to "Imágenes", root_path, class: "navbar-brand col-xs" %>
+	    </li>
+	    <li  class="col-md">
+	      	<%= link_to "Ejercicios", root_path, class: "navbar-brand col-xs" %>
+	    </li>
+		<li class="col-xs">
+			<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "navbar-brand col-xs"%>
+		</li>
+
+	<%else%>
+		<li class="col-xs">
+			<%= link_to "Iniciar sesión", new_user_session_url, method: :get, class: "navbar-brand col-xs"%>
+		</li>
+	<%end%>
+
+
+
+
+        
+  </ul>
+</nav>
+
