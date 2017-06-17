@@ -6,11 +6,14 @@
 
 
     <%if user_signed_in? %>
-		<li  class="col-md">
+		<!--li  class="col-md">
 	     	<%= link_to "Imágenes", root_path, class: "navbar-brand col-xs" %>
-	    </li>
-	    <li  class="col-md">
+	    </li-->
+	    <!--li  class="col-md">
 	      	<%= link_to "Ejercicios", root_path, class: "navbar-brand col-xs" %>
+	    </li-->
+	    <li  class="col-md">
+	      	<%= link_to "Páginas Bloqueadas", bloqueadas_path, class: "navbar-brand col-xs" %>
 	    </li>
 		<li class="col-xs">
 			<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "navbar-brand col-xs"%>
